@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialiser le panier vide
     let cart = [];
     
-    // Créer l'élément du panier dans la navigation
+    // Création de l'élément du panier dans la navigation
     const navUl = document.querySelector('nav ul');
     const cartLi = document.createElement('li');
     cartLi.className = 'cart-icon';
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     main.appendChild(cartSection);
     
-    // Ajouter des écouteurs d'événements aux boutons "Ajouter au panier"
+    // Ajout des écouteurs d'événements aux boutons "Ajouter au panier"
     const addToCartButtons = document.querySelectorAll('.card button');
     
     addToCartButtons.forEach(button => {
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     });
     
-    // Fonctionnalité pour ajouter un article au panier
+    // Fonction pour ajouter un article au panier
     function addToCart(item) {
       cart.push(item);
       updateCartDisplay();
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
       // Mettre à jour le total
       document.getElementById('total-items').textContent = cart.length;
       
-      // Ajouter des écouteurs d'événements aux boutons de suppression
+      // Ajout des écouteurs d'événements aux boutons de suppression
       const removeButtons = document.querySelectorAll('.remove-item');
       removeButtons.forEach(button => {
         button.addEventListener('click', function() {
@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
     
-    // Fonctionnalité pour supprimer un article du panier
+    // Fonction pour supprimer un article du panier
     function removeFromCart(index) {
       const removedItem = cart[index];
       cart.splice(index, 1);

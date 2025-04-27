@@ -48,6 +48,9 @@ main {
     gap : 20px;
     flex-wrap: wrap;
 }
+.card .card-content button:hover {
+    cursor: pointer;
+}
 footer {
     margin-top: 10vmin;
     width: 100%;
